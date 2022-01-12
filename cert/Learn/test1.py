@@ -1,4 +1,5 @@
-import modulos.Router
+from modulos import Router
+from modulos import Switch
 
 rtr1 = Router('iosV', '15.6.7', '10.10.10.1')
 rtr2 = Router('isr4221', '16.9.5', '10.10.10.5')
