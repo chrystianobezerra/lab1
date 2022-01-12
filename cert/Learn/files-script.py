@@ -73,4 +73,9 @@ with open("file1.xml") as data:
 
 xml_dict = xmltodict.parse(xml_example)
 
+xml_dict["interface"]["ipv4"]["address"]["ip"] = "10.10.10.1"
+
 print(xml_dict)
+
+with open("file1.xml", "w") as data:
+    data.write(xmltodict.unparse(xml_dict, pretty=True))
