@@ -52,16 +52,25 @@ import csv
 #            csv_writer = csv.writer(data)
 #            csv_writer.writerow(router)
 
-import json
-with open("teste.json") as data:
-    json_data = data.read()
+#import json
+#with open("teste.json") as data:
+#    json_data = data.read()
+#
+#json_dict = json.loads(json_data)
+#type(json_dict)
+#
+#json_dict["interface"]["description"] = "Teste de description"
+#print(json_dict)
+#
+#with open("teste.json", "w") as fh:
+#    json.dump(json_dict, fh, indent = 4)
 
-json_dict = json.loads(json_data)
-type(json_dict)
+#Manipulando XML
 
-json_dict["interface"]["description"] = "Teste de description"
-print(json_dict)
+import xmltodict
+with open("file1.xml") as data:
+    xml_example = data.read()
 
-with open("teste.json", "w") as fh:
-    json.dump(json_dict, fh, indent = 4)
+xml_dict = xmltodict.parse(xml_example)
 
+print(xml_dict)
