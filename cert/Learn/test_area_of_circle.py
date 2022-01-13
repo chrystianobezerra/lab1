@@ -1,4 +1,4 @@
-#Scripts para estudo de unittest
+#Função de teste
 
 from math import pi
 
