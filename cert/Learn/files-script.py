@@ -67,15 +67,27 @@ import csv
 
 #Manipulando XML
 
-import xmltodict
-with open("file1.xml") as data:
-    xml_example = data.read()
+#import xmltodict
+#with open("file1.xml") as data:
+#    xml_example = data.read()
+#
+#xml_dict = xmltodict.parse(xml_example)
+#
+#xml_dict["interface"]["ipv4"]["address"]["ip"] = "10.10.10.1"
+#
+#print(xml_dict)
+#
+#with open("file1.xml", "w") as data:
+#    data.write(xmltodict.unparse(xml_dict, pretty=True))
 
-xml_dict = xmltodict.parse(xml_example)
+#Manipulando arquivos YAML
 
-xml_dict["interface"]["ipv4"]["address"]["ip"] = "10.10.10.1"
+import yaml
 
-print(xml_dict)
+with open("file2.yaml") as data:
+    yaml_sample = data.read()
 
-with open("file1.xml", "w") as data:
-    data.write(xmltodict.unparse(xml_dict, pretty=True))
+yaml_dict = yaml.load(yaml_sample, Loader=yaml.FullLoader)
+type (yaml_dict)
+
+print(yaml_dict)
