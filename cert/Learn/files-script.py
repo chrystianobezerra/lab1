@@ -91,3 +91,10 @@ yaml_dict = yaml.load(yaml_sample, Loader=yaml.FullLoader)
 type (yaml_dict)
 
 print(yaml_dict)
+
+yaml_dict["interface"]["name"] = "GigabitEthernet1"
+
+print(yaml.dump(yaml_dict, default_flow_style=False))
+
+with open("file2.yaml", "w") as data:
+    data.write(yaml.dump(yaml_dict, default_flow_style=false))
