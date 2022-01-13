@@ -12,3 +12,8 @@ class Test_Area_of_Circle_input (unittest.TestCase):
         self.assertAlmostEqual(area_of_circle(1), pi)
         self.assertAlmostEqual(area_of_circle(0), 0)
         self.assertAlmostEqual(area_of_circle(3.5), pi *3.5**2)
+
+    def test_values(self):
+
+    # Test that bad values are caught
+    self.assertRaises(ValueError, area_of_circle, -1)
